@@ -24,7 +24,7 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.About,
     {
       name: 'HTB',
-      url: 'https://github.com/saicaca/fuwari',
+      url: 'https://app.hackthebox.com/profile/1511032',
       external: true,
     },
   ],
@@ -38,12 +38,12 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'HackTheBox',
       icon: 'octicon:package-16',
-      url: 'https://twitter.com',
+      url: 'https://app.hackthebox.com/profile/1511032',
     },
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/saicaca/fuwari',
+      url: 'https://github.com/fen1x1a/fen1x1a.github.io',
     },
   ],
 }
