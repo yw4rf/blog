@@ -4,22 +4,11 @@ export type SiteConfig = {
 
   lang: string
 
-  themeColor: {
-    hue: number
-    fixed: boolean
-  }
+  themeHue: number
   banner: {
     enable: boolean
     src: string
   }
-
-  favicon: Favicon[]
-}
-
-export type Favicon = {
-  src: string,
-  theme?: 'light' | 'dark'
-  sizes?: string
 }
 
 export enum LinkPreset {

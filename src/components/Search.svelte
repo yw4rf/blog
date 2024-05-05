@@ -1,17 +1,16 @@
 <script lang="ts">
 import { onMount } from 'svelte'
-import {url} from "@utils/url-utils.ts"
 let keywordDesktop = ''
 let keywordMobile = ''
 let result = []
 const fakeResult = [{
-    url: url('/'),
+    url: '/',
     meta: {
         title: 'This Is a Fake Search Result'
     },
     excerpt: 'Because the search cannot work in the <mark>dev</mark> environment.'
 }, {
-    url: url('/'),
+    url: '/',
     meta: {
         title: 'If You Want to Test the Search'
     },
@@ -27,7 +26,7 @@ onMount(() => {
             return
 
         if (!keyword && isDesktop) {
-            panel.classList.add("float-panel-closed")
+            panel.classList.add("closed")
             return
         }
 
@@ -44,12 +43,12 @@ onMount(() => {
         }
 
         if (!arr.length && isDesktop) {
-            panel.classList.add("float-panel-closed")
+            panel.classList.add("closed")
             return
         }
 
         if (isDesktop) {
-            panel.classList.remove("float-panel-closed")
+            panel.classList.remove("closed")
         }
         result = arr
     }
@@ -57,7 +56,7 @@ onMount(() => {
 
 const togglePanel = () => {
     let panel = document.getElementById('search-panel')
-    panel?.classList.toggle("float-panel-closed")
+    panel?.classList.toggle("closed")
 }
 
 $: search(keywordDesktop, true)
@@ -83,7 +82,7 @@ $: search(keywordMobile, false)
 </button>
 
 <!-- search panel -->
-<div id="search-panel" class="float-panel float-panel-closed search-panel absolute md:w-[30rem]
+<div id="search-panel" class="float-panel closed search-panel absolute md:w-[30rem]
 top-20 left-4 md:left-[unset] right-4 shadow-2xl rounded-2xl p-2">
 
     <!-- search bar inside panel for phone/tablet -->
