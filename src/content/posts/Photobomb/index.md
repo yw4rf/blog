@@ -66,7 +66,7 @@ PORT   STATE SERVICE REASON         VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-Muy bien, en el puerto *22* no logro notar algo interesante o una versión que nos permita enumerar usuarios, así que optemos por visitar la el sitio web que se encuentra en el puerto *80*, podemos ver que escaneo de nmap redirecciona al sitio *photobomb.htb* así que para poder tener acceso agreguemos esta dirección dentro del */etc/hosts*
+Muy bien, en el puerto *22* no logro notar algo interesante o una versión que nos permita enumerar usuarios, así que optemos por visitar el sitio web que se encuentra en el puerto *80*, podemos ver que escaneo de nmap redirecciona al sitio *photobomb.htb* así que para poder tener acceso agreguemos esta dirección dentro del */etc/hosts*
 `10.10.11.182    photobomb.htb`
 Una vez agregada, accedamos a ella por medio del navegador:
 ![Index](Index.png)
