@@ -43,6 +43,7 @@ ncat -nv --source-port 56 10.10.10.5 9000
 
 ### Otros parametros utiles en la evasion
 ```bash
+--disable-arp-ping # Deshabilitar ARP ping scan
 --spoof-mac # Cambiar la MAC por ejemplo Vmware
 --ttl # Establecer un TTL diferente
 --data-length # Variar el length de los paquetes enviados
@@ -50,7 +51,6 @@ ncat -nv --source-port 56 10.10.10.5 9000
 
 ## Parametros extra
 ```bash
---disable-arp-ping # Deshabilitar ARP ping scan
 --packet-trace # Obtener la traza de los paquetes
 --reason # Obtener la razón del estado del puerto
 -sN # TCP Null Scan
