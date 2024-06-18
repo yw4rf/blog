@@ -25,9 +25,14 @@ export const es: Translation = {
 
   [Key.themeColor]: 'Color del Tema',
 
+  [Key.lightMode]: 'Light',
+  [Key.darkMode]: 'Dark',
+  [Key.systemMode]: 'Sistema',
+
   [Key.more]: 'Mas',
 
   [Key.author]: 'Autor',
   [Key.publishedAt]: 'Publicado el',
   [Key.license]: 'Licencia',
 }
+

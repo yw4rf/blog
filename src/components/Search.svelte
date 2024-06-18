@@ -1,16 +1,17 @@
 <script lang="ts">
 import { onMount } from 'svelte'
+import {url} from "@utils/url-utils.ts"
 let keywordDesktop = ''
 let keywordMobile = ''
 let result = []
 const fakeResult = [{
-    url: '/',
+    url: url('/'),
     meta: {
         title: 'This Is a Fake Search Result'
     },
     excerpt: 'Because the search cannot work in the <mark>dev</mark> environment.'
 }, {
-    url: '/',
+    url: url('/'),
     meta: {
         title: 'If You Want to Test the Search'
     },
@@ -26,7 +27,7 @@ onMount(() => {
             return
 
         if (!keyword && isDesktop) {
-            panel.classList.add("closed")
+            panel.classList.add("float-panel-closed")
             return
         }
 
@@ -43,12 +44,12 @@ onMount(() => {
         }
 
         if (!arr.length && isDesktop) {
-            panel.classList.add("closed")
+            panel.classList.add("float-panel-closed")
             return
         }
 
         if (isDesktop) {
-            panel.classList.remove("closed")
+            panel.classList.remove("float-panel-closed")
         }
         result = arr
     }
@@ -56,7 +57,7 @@ onMount(() => {
 
 const togglePanel = () => {
     let panel = document.getElementById('search-panel')
-    panel?.classList.toggle("closed")
+    panel?.classList.toggle("float-panel-closed")
 }
 
 $: search(keywordDesktop, true)
@@ -69,7 +70,7 @@ $: search(keywordMobile, false)
       dark:bg-white/5 dark:hover:bg-white/10 dark:focus-within:bg-white/10
 ">
     <slot name="search-icon"></slot>
-    <input placeholder="Search" bind:value={keywordDesktop} on:focus={() => search(keywordDesktop, true)}
+    <input placeholder="Buscar" bind:value={keywordDesktop} on:focus={() => search(keywordDesktop, true)}
            class="transition-all pl-10 text-sm bg-transparent outline-0
          h-full w-40 active:w-60 focus:w-60 text-black/50 dark:text-white/50"
     >
@@ -82,7 +83,7 @@ $: search(keywordMobile, false)
 </button>
 
 <!-- search panel -->
-<div id="search-panel" class="float-panel closed search-panel absolute md:w-[30rem]
+<div id="search-panel" class="float-panel float-panel-closed search-panel absolute md:w-[30rem]
 top-20 left-4 md:left-[unset] right-4 shadow-2xl rounded-2xl p-2">
 
     <!-- search bar inside panel for phone/tablet -->
@@ -91,7 +92,7 @@ top-20 left-4 md:left-[unset] right-4 shadow-2xl rounded-2xl p-2">
       dark:bg-white/5 dark:hover:bg-white/10 dark:focus-within:bg-white/10
   ">
         <slot name="search-icon"></slot>
-        <input placeholder="Search" bind:value={keywordMobile}
+        <input placeholder="Buscar" bind:value={keywordMobile}
                class="pl-10 absolute inset-0 text-sm bg-transparent outline-0
                focus:w-60 text-black/50 dark:text-white/50"
         >
