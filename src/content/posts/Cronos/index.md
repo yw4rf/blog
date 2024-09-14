@@ -10,10 +10,10 @@ draft: false
 # Descripción
 
 - **Nivel:** Intermedia (Según HackTheBox).
-- **Temas a tratar:** Enumeración,DNS AXFR, SQLi, Command Injection, Cron Jobs, PHP.
+- **Temas a tratar:** Enumeración, DNS AXFR, SQLi, Command Injection, Cron Jobs, PHP.
 - **OS:** Linux.
 - **Plataforma:** [HackTheBox](https://app.hackthebox.com/machines/11)
-- **Fecha de retiro:** 15/08/2020
+- **Fecha de retiro:** 26/05/2017
 - **IP victima:** 10.10.10.13
 - **IP atacante:** 10.10.14.16
 
