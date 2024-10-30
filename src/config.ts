@@ -7,12 +7,12 @@ import type {
 import { LinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
-  title: 'Fenixia',
-  subtitle: 'Blog Site',
+  title: 'Yw4rf',
+  subtitle: 'Website',
   lang: 'es',         // 'en', 'zh_CN', 'zh_TW', 'ja'
   themeColor: {
-    hue: 300,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
-    fixed: true,     // Hide the theme color picker for visitors
+    hue: 270,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+    fixed: false,     // Hide the theme color picker for visitors
   },
   banner: {
     enable: true,
@@ -34,8 +34,8 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Archive,
     LinkPreset.About,
     {
-      name: 'HTB',
-      url: 'https://app.hackthebox.com/profile/1511032',
+      name: 'Contact',
+      url: 'https://t.me/yw4rf',
       external: true,
     },
   ],
@@ -43,18 +43,26 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/avatar.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-  name: 'Fenixia',
-  bio: '|EJPTv2|',
+  name: 'Yw4rf',
+  bio: 'Cybersecurity Enthusiast with Hands-on Penetration Testing Experience | CTF Player | Computer Networks Student',
   links: [
     {
-      name: 'HackTheBox',
-      icon: 'octicon:package-16',
-      url: 'https://app.hackthebox.com/profile/1511032',
+      name: 'Telegram',
+      icon: 'fa6-brands:telegram',
+      url: 'https://t.me/yw4rf',
+    },{
+      name: 'Linkedin',
+      icon: 'fa6-brands:linkedin',
+      url: 'https://linkedin.com/in/yw4rf',
+    },{
+      name: 'Twitter',
+      icon: 'fa6-brands:twitter',
+      url: 'https://x.com/yw4rf',
     },
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/fen1x1a/fen1x1a.github.io',
+      url: 'https://github.com/yw4rf',
     },
   ],
 }
